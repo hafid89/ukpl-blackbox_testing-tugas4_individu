@@ -1,0 +1,106 @@
+<mxfile host="app.diagrams.net" agent="5.0">
+  <diagram name="State Transition Diagram" id="state-transition-diagram">
+    <mxGraphModel dx="1229" dy="690" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="s0" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1" value="Program dimulai (S0)" vertex="1">
+          <mxGeometry height="50" width="160" x="280" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="s1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1" value="Tampil prompt input usia (S1)" vertex="1">
+          <mxGeometry height="50" width="180" x="270" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="s3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1" value="Tampil &quot;DITERIMA&quot; (S3)" vertex="1">
+          <mxGeometry height="50" width="180" x="510" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="s4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;fontStyle=1" value="Tampil &quot;DITOLAK&quot; (S4)" vertex="1">
+          <mxGeometry height="50" width="180" x="280" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="s5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;fontStyle=1" value="Tampil pesan ERROR (S5)" vertex="1">
+          <mxGeometry height="50" width="180" x="60" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="edge1" edge="1" parent="1" source="s0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;strokeWidth=2;fillColor=#e1d5e7;strokeColor=#9673a6;" target="s1" value="Event: Program dijalankan (ST)&#xa;Aksi: Tampil prompt input usia (PA)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2" edge="1" parent="1" source="s1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" target="s3" value="Event: Usia 13-17 (AV1)&#xa;Aksi: Tampil &quot;Diterima dengan catatan&quot; (RC)">
+          <mxGeometry relative="1" x="0.5556" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="420" y="290" />
+              <mxPoint x="560" y="290" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge3" edge="1" parent="1" source="s1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" target="s3" value="Event: Usia 18-60 (AV2)&#xa;Aksi: Tampil &quot;Diterima langsung&quot; (RL)">
+          <mxGeometry relative="1" x="0.283" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="420" y="240" />
+              <mxPoint x="640" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge4" edge="1" parent="1" source="s1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;strokeWidth=2;fillColor=#f8cecc;strokeColor=#b85450;" target="s4" value="Event: Usia 1-12 (BR1)&#xa;Aksi: Tampil &quot;Terlalu muda&quot; (TM)">
+          <mxGeometry relative="1" x="0.4857" y="-10" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="360" y="375" />
+              <mxPoint x="320" y="375" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge5" edge="1" parent="1" source="s1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;strokeWidth=2;fillColor=#f8cecc;strokeColor=#b85450;" target="s4" value="Event: Usia &gt;60 (BR2)&#xa;Aksi: Tampil &quot;Terlalu tua&quot; (TT)">
+          <mxGeometry relative="1" x="0.3158" y="-20" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="360" y="375" />
+              <mxPoint x="430" y="375" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge6" edge="1" parent="1" source="s1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;strokeWidth=2;fillColor=#f8cecc;strokeColor=#b85450;" target="s5" value="Event: Usia &lt;= 0 (AI)&#xa;Aksi: Tampil &quot;Usia tidak valid&quot; (EU)">
+          <mxGeometry relative="1" x="0.3778" y="10" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="300" y="290" />
+              <mxPoint x="160" y="290" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12;fontStyle=1;align=left;" value="" vertex="1">
+          <mxGeometry height="180" width="400" x="480" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_s0" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;" value="S0 : Program dimulai" vertex="1">
+          <mxGeometry height="20" width="180" x="500" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_s1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;" value="S1 : Menunggu input usia" vertex="1">
+          <mxGeometry height="20" width="180" x="500" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_s3" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;" value="S3 : Menampilkan hasil diterima" vertex="1">
+          <mxGeometry height="20" width="200" x="500" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_s4" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;" value="S4 : Menampilkan hasil ditolak" vertex="1">
+          <mxGeometry height="20" width="200" x="500" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_s5" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;" value="S5 : Menampilkan pesan error" vertex="1">
+          <mxGeometry height="20" width="200" x="500" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_st" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;fontColor=#9673a6;" value="ST : Program dijalankan" vertex="1">
+          <mxGeometry height="20" width="180" x="700" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_av" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;fontColor=#82b366;" value="AV : Input usia valid" vertex="1">
+          <mxGeometry height="20" width="180" x="700" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_br" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;fontColor=#b85450;" value="BR : Input usia ditolak" vertex="1">
+          <mxGeometry height="20" width="180" x="700" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_ai" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;fontColor=#b85450;" value="AI : Input usia error (≤0)" vertex="1">
+          <mxGeometry height="20" width="180" x="700" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="P0w61zCHlTNV_BpraGKZ-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;span style=&quot;font-weight: 700; text-align: left;&quot;&gt;Keterangan:&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="490" y="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
